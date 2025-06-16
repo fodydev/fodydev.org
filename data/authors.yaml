@@ -1,0 +1,5 @@
+# blog author data, the key is github username.
+pythonbrad:
+  name: Brady Fomegne
+  twitter: pythonbrad
+  company: FodyDev

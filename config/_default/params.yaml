@@ -1,0 +1,40 @@
+######################## custom scripts & styles ####################
+
+# Add custom assets relative to /static or via https
+logo_on_white: "/img/fodydev-logo-on-white.png"
+logo_on_black: "/img/fodydev-logo-on-black.png"
+custom_js: []
+custom_css: []
+
+######################## custom config ####################
+
+### default social share image (can also be set per lang) ###
+images: ["/img/todo-social-share.png"]
+
+github:
+  repo_url: "https://github.com/fodydev/fodydev.org/blob/main"
+  show_edit_link: true
+
+social_links:
+  devstats: ""
+  discord: ""
+  facebook: ""
+  flickr: ""
+  github: "https://github.com/fodydev"
+  instagram: ""
+  landscape: ""
+  linkedin: "https://www.linkedin.com/company/fodydev/"
+  mastodon: ""
+  pinterest: ""
+  rss: "https://fodydev.org/index.xml"
+  slack: ""
+  stackoverflow: ""
+  threads: ""
+  twitter: ""
+  x: "https://twitter.com/fodydev"
+  youtube: ""
+
+# Makes the header sticky on tall screens
+sticky_header: true
+# Enable search in header UI
+show_search: true

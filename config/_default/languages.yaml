@@ -1,0 +1,116 @@
+en:
+  languageName: English
+  weight: 1
+  ### copyright (markdown can be used) ###
+  copyright: "Copyright &copy; {{< current_year >}} FodyDev. All rights reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) by [CNCF](https://www.cncf.io)."
+  title: "FodyDev"
+  params:
+    description: "FodyDev is an opensource organization who aims to promote the African culture through opensource technologies."
+    ### accessibility ###
+    accessibility:
+      skip_text: "Skip to content"
+      help_text: ""
+      help_url: ""
+    ### calls to action ###
+    main_cta:
+      text: "Join"
+      link: "/join/"
+    footer_cta:
+      text: "Join FodyDev"
+      link: "/join/"
+    github_edit: "Edit this page on GitHub"
+  ### example menu showing children ###
+  menu:
+    main:
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 1
+    - identifier: "about-us"
+      name: "About Us"
+      url: "/about/about-us/"
+      weight: 1
+      post: "The mission of the projects and the community"
+      parent: "about"
+    - identifier: "associates"
+      name: "Associates"
+      url: "/about/associates/"
+      weight: 2
+      post: "Projects, communities & foundations supporting FodyDev"
+      parent: "about"
+    - identifier: "supporters"
+      name: "Supporters"
+      url: "/about/supporters/"
+      weight: 3
+      post: "The orgnizations supporting FodyDev worldwide"
+      parent: "about"
+    - identifier: "projects"
+      name: "Projects"
+      url: "/projects/"
+      weight: 2
+    - identifier: "community"
+      name: "Community"
+      url: "/community/"
+      weight: 3
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 4
+fr:
+  languageName: Français
+  contentDir: content/fr
+  weight: 2
+  params:
+    copyright: "Copyright &copy; {{< current_year >}} FodyDev. Tous droits réservés. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) par [CNCF](https://www.cncf.io)."
+    title: "FodyDev"
+    description: "FodyDev est une organisation open source qui vise à promouvoir la culture africaine à travers les technologies libres."
+    ### accessibility ###
+    accessibility:
+      skip_text: "Aller au contenu"
+      help_text: ""
+      help_url: ""
+    ### calls to action ###
+    main_cta:
+      text: "Rejoindre"
+      link: "/join/"
+    footer_cta:
+      text: "Rejoindre FodyDev"
+      link: "/join/"
+    github_edit: "Modifier cette page sur GitHub"
+  ### example menu showing children ###
+  menu:
+    main:
+    - identifier: "about"
+      name: "À propos"
+      url: "/about/"
+      weight: 1
+    - identifier: "about-us"
+      name: "Notre vision"
+      url: "/about/about-us/"
+      weight: 1
+      post: "La vision de FodyDev et son engagement pour la communauté"
+      parent: "about"
+    - identifier: "associates"
+      name: "Partenaires"
+      url: "/about/associates/"
+      weight: 2
+      post: "Projets, communautés et fondations qui collaborent avec FodyDev"
+      parent: "about"
+    - identifier: "supporters"
+      name: "Soutiens"
+      url: "/about/supporters/"
+      weight: 3
+      post: "Les organisations qui soutiennent FodyDev à travers le monde"
+      parent: "about"
+    - identifier: "projects"
+      name: "Projets"
+      url: "/projects/"
+      weight: 2
+    - identifier: "community"
+      name: "Communauté"
+      url: "/community/"
+      weight: 3
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 4
