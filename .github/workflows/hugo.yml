@@ -53,6 +53,7 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
+          npm_config_yes=true npx pagefind --site 'public' --output-path 'static/pagefind'
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
