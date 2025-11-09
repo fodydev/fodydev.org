@@ -24,7 +24,7 @@ privacy:
   vimeo:
     enableDNT: true
 
-+markup:
-+  goldmark:
-+    renderer:
-+      unsafe: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

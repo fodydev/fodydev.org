@@ -43,20 +43,20 @@ npm install
 4. Build the site:
 
 ```bash
-npm run build
+npm run build:dev
 ```
 
 5. Start the local server with live reload:
 
 ```bash
-npm run start
+npm start
 ```
 
 ## Other npm commands for working with a local instance
 
-- `npm run dev:start` - Starts the local dev environment using exampleSite
-- `npm run dev:start:with-pagefind` - Starts the local dev environment using exampleSite with working pagefind search
-- `npm run dev:build` - Builds the site using exampleSite
+- `npm run dev:start` - Starts the local dev environment (without pagefind)
+- `npm run dev:build` - Builds the site for dev environment
+- `npm run dev:prod` - Builds the site for prod envirionment
 
 ### To run in docker
 
@@ -72,18 +72,8 @@ If modifying the theme files, you should never edit the theme that is imported v
 
 ## Updating the theme
 
-Some brief notes on how to update the theme:
-
 From the site root:
 
 ```
-git submodule init
-git submodule update
-cd themes/dot-org-hugo-theme
-git fetch
-git checkout main
-git pull origin main
-cd ../..
-git add themes/dot-org-hugo-theme
-git commit -m "Updated submodule to the latest version of dot-org-hugo-theme" -s
+git submodule update --init --recursive
 ```
