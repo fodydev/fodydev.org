@@ -59,10 +59,7 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-          npm_config_yes=true npx pagefind --site 'public' --output-path 'public/pagefind'
+          npm build:prod
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
