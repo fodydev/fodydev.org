@@ -4,7 +4,7 @@
   "description": "",
   "main": "none.js",
   "scripts": {
-    "start": "hugo server --disableFastRender --ignoreCache --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints --gc",
+    "dev:start": "hugo server --disableFastRender --ignoreCache --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints --gc",
     "start:with-pagefind": "hugo --baseURL=/ && npx -y pagefind --site public --output-path static/pagefind && npm start",
     "build:dev": "hugo --buildDrafts --buildFuture --baseURL=/ && npx -y pagefind --site public",
     "build:prod": "hugo --minify && npx -y pagefind --site public"
