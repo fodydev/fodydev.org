@@ -10,3 +10,4 @@
 {{ if (eq .Kind "home") }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="all">
 {{ end }}
+<link rel="canonical" href="{{ .Permalink }}"/>
