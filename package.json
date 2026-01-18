@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cncf/dot-org-hugo-theme#readme",
   "dependencies": {
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.23",
     "hugo-extended": "^0.148.1",
     "netlify-cli": "^22.3.0",
     "postcss": "^8.5.6",
