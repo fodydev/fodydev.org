@@ -4,4 +4,4 @@ description: This is the demo site for Dot Org Theme. The title description and 
 showHeader: false
 ---
 
-# This file is used to pass params to the index/home.
+# FodyDev is an opensource organization who wants to promote the building of opensource technologies to valorize the African culture. We believe that, in working openly we can have archieve more.
