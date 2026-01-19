@@ -49,7 +49,7 @@ npm run build:dev
 5. Start the local server with live reload:
 
 ```bash
-npm start
+npm run dev:start
 ```
 
 ## Other npm commands for working with a local instance
