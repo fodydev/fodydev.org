@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site
 
 on:
   # Runs on pushes targeting the default branch
@@ -62,19 +62,43 @@ jobs:
           npm run build:prod
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: page
           path: ./public
 
   # Deployment job
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: page
+          
+      - name: Get LFTP
+        run: sudo apt install lftp
+
+      - name: Configure LFTP
+        run: mkdir -p ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
+        
+      - name: Load Secrets
+        run: echo "machine ${{ secrets.FTP_HOST }} login ${{ secrets.FTP_USER }} password ${{ secrets.FTP_PASS }}" > ~/.netrc
+        
+      - name: Deploy to fodydev.org
+        run: lftp -e "mirror -n -R -v . ." ${{ secrets.FTP_HOST }}
+
+  # Keep the github deployment in case of unavailability of our web server.
+  gh-deploy:
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      needs: build
+      if: github.ref == 'refs/heads/main'
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
