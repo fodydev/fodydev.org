@@ -77,15 +77,18 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: page
-          
-      - name: Get LFTP
-        run: sudo apt install lftp
 
-      - name: Configure LFTP
-        run: mkdir -p ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
+      - name: debug
+        run: ls
+          
+      # - name: Get LFTP
+      #   run: sudo apt install lftp
+
+      # - name: Configure LFTP
+      #   run: mkdir -p ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
         
-      - name: Load Secrets
-        run: echo "machine ${{ secrets.FTP_HOST }} login ${{ secrets.FTP_USER }} password ${{ secrets.FTP_PASS }}" > ~/.netrc
+      # - name: Load Secrets
+      #   run: echo "machine ${{ secrets.FTP_HOST }} login ${{ secrets.FTP_USER }} password ${{ secrets.FTP_PASS }}" > ~/.netrc
         
-      - name: Deploy to fodydev.org
-        run: lftp -e "mirror -n -R -v ./public/ ." ${{ secrets.FTP_HOST }}
+      # - name: Deploy to fodydev.org
+      #   run: lftp -e "mirror -n -R -v ./public/ ." ${{ secrets.FTP_HOST }}
