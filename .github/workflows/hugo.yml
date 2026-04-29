@@ -67,6 +67,11 @@ jobs:
           name: page
           path: ./public
 
+      - name: Upload artifact for Github page
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
@@ -99,13 +104,6 @@ jobs:
       needs: build
       if: github.ref == 'refs/heads/main'
       steps:
-        - name: Download artifact
-          uses: actions/download-artifact@v5
-          with:
-            name: page
-        
         - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v4
-          with:
-            folder: .
