@@ -99,6 +99,13 @@ jobs:
       needs: build
       if: github.ref == 'refs/heads/main'
       steps:
+        - name: Download artifact
+          uses: actions/download-artifact@v5
+          with:
+            name: page
+        
         - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v4
+          with:
+            folder: .
