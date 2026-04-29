@@ -71,7 +71,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v5
@@ -83,6 +83,12 @@ jobs:
         
       - name: Configure LFTP
         run: mkdir ~/.lftp && echo "set ssl:verify-certificate true;" >> ~/.lftp/rc
- 
+
+      - name: Configure LFTP
+        run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
+        
+      - name: Load Secrets
+        run: echo "machine ${{ secrets.FTP_HOST }} login ${{ secrets.FTP_USER }} password ${{ secrets.FTP_PASS }}" > ~/.netrc
+        
       - name: Deploy to fodydev.org
-        run: lftp -c "set ssl:verify-certificate true; open -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }}; mirror -n -v fodydev.org ./public"
+        run: lftp -e "mirror -n -R -v ./public/ ." ${{ secrets.FTP_HOST }}
