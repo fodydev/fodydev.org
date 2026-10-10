@@ -3,7 +3,7 @@ title: Join the FodyDev community
 url: "/community/"
 ---
 
-We welcome everyone who wants to support African culture and open-source software.
+We welcome everyone who wants to support African sovereignty and open-source software.
 
 ## Where You Can Find Us
 

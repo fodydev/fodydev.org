@@ -1,6 +1,6 @@
 ---
-title: Acceuil
-description: FodyDev est une organisation open source qui souhaite encourager le développement de technologies libres pour valoriser la culture africaine.
+title: Accueil
+description: FodyDev est une organisation open source qui vise à promouvoir la souveraineté africaine à travers les technologies libres.
 showHeader: false
 ---
 

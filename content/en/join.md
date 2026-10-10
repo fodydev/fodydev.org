@@ -4,7 +4,7 @@ url: "/join/"
 ---
 
 {{< intro >}}
-The FodyDev community welcomes everyone who cares about African culture and open-source technology. Whether you want to learn more, contribute, or support us, there is a place for you here.
+The FodyDev community welcomes everyone who cares about African sovereignty and open-source technology. Whether you want to learn more, contribute, or support us, there is a place for you here.
 {{< /intro >}}
 
 ## Become a Member
@@ -25,7 +25,7 @@ Find out how to support us on the [Supporters](/about/supporters/) page.
 
 ## Join the Community
 
-Join our community of developers, linguists, and culture lovers. Participate in discussions, contribute code, translate, or just stay informed.
+Join our community of developers, advocates, and tech enthusiasts. Participate in discussions, contribute code, translate, or just stay informed.
 
 Visit our [Community](/community/) page to get started.
 
@@ -33,4 +33,4 @@ Visit our [Community](/community/) page to get started.
 
 You can also explore our projects on [GitHub](https://github.com/fodydev) and start contributing today!
 
-Everyone is welcome — come help build the future of African languages and culture.
+Everyone is welcome — come help build the future of African sovereignty.

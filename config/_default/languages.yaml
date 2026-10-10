@@ -3,9 +3,9 @@ en:
   weight: 1
   ### copyright (markdown can be used) ###
   copyright: "Copyright &copy; {{< current_year >}} FodyDev. All rights reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) by [CNCF](https://www.cncf.io)."
-  title: "FodyDev // Promoting African culture through opensource."
+  title: "FodyDev // Promoting African sovereignty through open source"
   params:
-    description: "FodyDev is an opensource organization who aims to promote the African culture through opensource technologies."
+    description: "FodyDev is an open source organization that aims to promote African sovereignty through open source technologies."
     ### accessibility ###
     accessibility:
       skip_text: "Skip to content"
@@ -62,8 +62,8 @@ fr:
   weight: 2
   params:
     copyright: "Copyright &copy; {{< current_year >}} FodyDev. Tous droits réservés. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) par [CNCF](https://www.cncf.io)."
-    title: "FodyDev // Promouvoir la culture africaine a travers l'opensource."
-    description: "FodyDev est une organisation open source qui vise à promouvoir la culture africaine à travers les technologies libres."
+    title: "FodyDev // Promouvoir la souveraineté africaine à travers l'open source"
+    description: "FodyDev est une organisation open source qui vise à promouvoir la souveraineté africaine à travers les technologies libres."
     ### accessibility ###
     accessibility:
       skip_text: "Aller au contenu"

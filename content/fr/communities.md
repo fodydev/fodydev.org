@@ -3,7 +3,7 @@ title: Rejoindre la communauté FodyDev
 url: "/fr/community/"
 ---
 
-Nous accueillons toutes les personnes qui souhaitent soutenir la culture africaine et les logiciels open source.
+Nous accueillons toutes les personnes qui souhaitent soutenir la souveraineté africaine et les logiciels open source.
 
 ## Où nous trouver
 
@@ -24,12 +24,11 @@ Nous voulons que notre communauté soit :
 
 Vous pouvez commencer en :
 
-1. Visitant un projet sur GitHub.  
-2. Lisant le fichier README et le guide de CONTRIBUTING.  
-3. Choisissant une tâche ouverte (certaines sont marquées « good first issue »).  
+1. Visitant un projet sur GitHub.
+2. Lisant le fichier README et le guide de CONTRIBUTING.
+3. Choisissant une tâche ouverte (certaines sont marquées « good first issue »).
 4. Apportant vos modifications et en ouvrant une pull request.
 
 Vous pouvez aussi aider en écrivant de la documentation, en traduisant ou en testant les projets. Même les petites contributions comptent !
 
 {{< button link="https://github.com/fodydev/" text="Dépôt FodyDev" >}}
-

@@ -10,3 +10,4 @@ static/css/style-*.css
 static/pagefind
 hugo_stats.json
 *.sw[nop]
+.idea/

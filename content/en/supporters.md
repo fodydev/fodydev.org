@@ -5,7 +5,7 @@ url: "/about/supporters/"
 
 {{< intro >}}
 
-FodyDev is free and open for everyone. But we need help to keep building great tools.
+FodyDev is free and open for everyone. But we need help to keep building great tools to promote African sovereignty.
 
 {{< /intro >}}
 
@@ -18,7 +18,7 @@ FodyDev is free and open for everyone. But we need help to keep building great t
 Your support helps us:
 
 - Keep projects active and up to date
-- Build better tools for African languages
+- Build better tools for African sovereignty
 - Train and guide new contributors
 
 ## Thank You to Our Supporters
