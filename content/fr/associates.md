@@ -19,7 +19,7 @@ FodyDev est composé de personnes passionnées par l'open source et la souverain
 
 ## Partenaires
 
-- **[Kasahorow](https://hasahorow.org)**
+- **[Kasahorow](https://kasahorow.org)**
   Kasahorow travaille à rendre les langues africaines utiles et modernes. Ils encouragent l’apprentissage et l’utilisation des langues africaines au quotidien.
 
 - **[OSS Cameroon](https://osscameroon.com)**

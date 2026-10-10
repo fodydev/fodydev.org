@@ -19,7 +19,7 @@ FodyDev is made up of people who care about open source and African sovereignty.
 
 ## Partners
 
-- **[Kasahorow](https://hasahorow.org)**
+- **[Kasahorow](https://kasahorow.org)**
   They work to make African languages useful and modern. They support learning and using African languages in everyday life.
 
 - **[OSS Cameroon](https://osscameroon.com)**
