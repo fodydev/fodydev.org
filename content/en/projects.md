@@ -5,7 +5,7 @@ url: "/projects/"
 
 {{< intro >}}
 
-FodyDev creates open-source tools to support African languages and culture. All our code is on [GitHub](https://github.com/fodydev). Below are some of our main projects.
+FodyDev creates open-source tools to support African sovereignty. All our code is on [GitHub](https://github.com/fodydev). Below are some of our main projects.
 {{< /intro >}}
 
 ## Our Projects
@@ -18,7 +18,7 @@ FodyDev creates open-source tools to support African languages and culture. All 
 
 ## Projects We Support
 
-We support projects that promote African culture through open technology.
+We support projects that promote African sovereignty through open technology.
 
 {{< responsive_table >}}
 | Project | Description | Website | GitHub |
@@ -36,7 +36,7 @@ These supported projects share our values. We help them grow by contributing cod
 | **African NLP Toolkit** | A toolkit for natural language processing (NLP) in African languages. It will support tasks like translation, and text analysis. | Planned | Coming soon |
 {{< /responsive_table >}}
 
-We believe that tools for African languages should include advanced language technologies like NLP. This project is an important next step for us.
+We believe that tools for African sovereignty should include advanced language technologies like NLP. This project is an important next step for us.
 
 {{< spacer >}}
 
