@@ -32,14 +32,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.169.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -51,14 +44,21 @@ jobs:
         if: ${{ !env.ACT }}
         uses: actions/configure-pages@v5
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Installs Hugo (pinned in package.json), Dart Sass, PostCSS and Pagefind.
       - name: Install Node.js dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
+
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        run: |
-          npm run build:prod
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
