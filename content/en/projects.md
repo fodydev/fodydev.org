@@ -10,10 +10,24 @@ FodyDev creates open-source tools to support African sovereignty. All our code i
 
 ## Our Projects
 
+### Afrim: type African languages everywhere
+
 {{< responsive_table >}}
 | Project | What It Does | Status | How to Help |
 |--------|----------------|--------|-------------|
-| **Afrim** | A smart input engine to type African languages easily | Active | Visit [afrim repo](https://github.com/fodydev/afrim) |
+| **Afrim** | An input method engine to type African languages easily with phonetic codes (e.g. `selam` → ሰላም in Ge'ez). It powers all the apps below. | Active | Visit the [afrim repo](https://github.com/fodydev/afrim) and read [The Afrim Book](https://fodydev.github.io/afrim-man/) |
+| **Afrim Desktop** | A native input method for Windows, Linux and macOS. | In development | Visit the [afrim-desktop repo](https://github.com/fodydev/afrim-desktop) |
+| **Afrim Keyboard** | An Android keyboard to type African languages anywhere on your phone, with a customizable dictionary. | In development | Visit the [afrim-keyboard repo](https://github.com/fodydev/afrim-keyboard) |
+| **Afrim Web** | Typing practice in African writing systems (Ge'ez, Bamum, Nufi, Medumba, Ewondo…) with live speed and accuracy. | Active | [Try it](https://fodydev.github.io/afrim-web/) or visit the [afrim-web repo](https://github.com/fodydev/afrim-web) |
+{{< /responsive_table >}}
+
+### Infrastructure & AI
+
+{{< responsive_table >}}
+| Project | What It Does | Status | How to Help |
+|--------|----------------|--------|-------------|
+| **FodyCloud** | Open-source cloud hosting for students: deploy apps from public GitHub, GitLab or Codeberg repositories, automatically built and served over HTTPS. | Pre-production | Visit the [fodycloud repo](https://github.com/fodydev/fodycloud) |
+| **ethioMCP** | An MCP server that gives AI assistants (Claude, ChatGPT…) access to Ethiopian and Eritrean linguistic resources, such as HornMorpho. | Early stage | Visit the [ethioMCP repo](https://github.com/fodydev/ethioMCP) |
 {{< /responsive_table >}}
 
 ## Projects We Support
