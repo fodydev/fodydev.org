@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/sh
+# Local dev server (used by run-hugo-in-docker.sh). Hugo is installed from npm (see package.json).
+set -e
 
-npm install
-npm run build
-hugo serve --logLevel info --configDir=config --buildDrafts --buildFuture \
-  --ignoreCache --disableFastRender --gc  --printI18nWarnings \
-  --printMemoryUsage --printPathWarnings --printUnusedTemplates \
-  --templateMetrics --templateMetricsHints --bind 0.0.0.0
+npm install --no-audit --no-fund
+npm run build:dev
+npm run dev -- --logLevel info --bind 0.0.0.0

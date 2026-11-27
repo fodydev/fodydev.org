@@ -1,12 +1,10 @@
-{{- $source := "scss/home.scss" }}
-{{- $target := "css/home.css" }}
-{{ $options := (dict "targetPath" $target) }}
-{{ if eq hugo.Environment "production" }}
-{{ $options = merge $options (dict "outputStyle" "compressed" "enableSourceMap" false) }}
-{{ else }}
-{{ $options = merge $options (dict "outputStyle" "nested" "enableSourceMap" true) }}
-{{ end }}
-{{ $style := resources.Get $source | toCSS $options | postCSS (dict "config" "postcss.config.js") | resources.Fingerprint "sha512" }}
+{{- $options := dict
+  "targetPath" "css/home.css"
+  "transpiler" "dartsass"
+  "outputStyle" (cond hugo.IsProduction "compressed" "expanded")
+  "enableSourceMap" (not hugo.IsProduction)
+}}
+{{- $style := resources.Get "scss/home.scss" | css.Sass $options | css.PostCSS (dict "config" "postcss.config.js") | fingerprint "sha512" }}
 {{ if (eq .Kind "home") }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="all">
 {{ end }}

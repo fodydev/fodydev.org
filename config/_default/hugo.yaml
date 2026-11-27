@@ -8,6 +8,12 @@ timeZone: "Africa/Douala"
 # Defines the minimum amount of words to reddened in a summary
 summaryLength: 50
 
+######################## hugo version ####################
+# Fail early with a clear message when built with an unsupported Hugo version.
+module:
+  hugoVersion:
+    min: "0.170.0"
+
 ######################## i18n ####################
 # Auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
 hasCJKLanguage: false

@@ -1,32 +1,32 @@
 {
-  "name": "dot-org-hugo-theme",
+  "name": "fodydev.org",
   "version": "1.0.0",
-  "description": "",
-  "main": "none.js",
-  "scripts": {
-    "dev:start": "hugo server --disableFastRender --ignoreCache --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints --gc",
-    "start:with-pagefind": "hugo --baseURL=/ && npx -y pagefind --site public --output-path static/pagefind && npm start",
-    "build:dev": "hugo --buildDrafts --buildFuture --baseURL=/ && npx -y pagefind --site public",
-    "build:prod": "hugo --minify && npx -y pagefind --site public"
-  },
+  "private": true,
+  "description": "FodyDev website, built with Hugo",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cncf/dot-org-hugo-theme"
+    "url": "https://github.com/fodydev/fodydev.org"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cncf/dot-org-hugo-theme/issues"
+  "engines": {
+    "node": ">=22"
   },
-  "homepage": "https://github.com/cncf/dot-org-hugo-theme#readme",
+  "scripts": {
+    "postinstall": "node scripts/link-dart-sass.js",
+    "dev": "hugo server --buildDrafts --buildFuture --disableFastRender --ignoreCache --printI18nWarnings --printPathWarnings --printUnusedTemplates --gc",
+    "dev:search": "npm run build:dev && pagefind --site public --output-path static/pagefind && npm run dev",
+    "build": "hugo build --gc --minify && pagefind --site public",
+    "build:dev": "hugo build --buildDrafts --buildFuture --baseURL=/ && pagefind --site public",
+    "start": "serve public --no-clipboard --listen tcp://0.0.0.0:${PORT:-3000}"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.23",
-    "hugo-extended": "^0.148.1",
-    "netlify-cli": "^22.3.0",
+    "hugo-extended": "0.170.1",
+    "pagefind": "^1.6.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
-    "sass-embedded": "^1.89.2"
+    "sass-embedded": "^1.89.2",
+    "serve": "^14.2.8"
   },
   "devDependencies": {
     "prettier": "^3.6.2"

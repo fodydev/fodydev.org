@@ -1,0 +1,25 @@
+{{- /* Overrides the theme's language selector to avoid .Site.Languages / .LanguageName (deprecated in Hugo v0.156 / v0.158). */ -}}
+{{ if gt (len hugo.Sites) 1 }}
+{{ $page := . }}
+{{ $currentLang := site.Language.Lang }}
+<div class="language-selector dropdown">
+    <div class="dropdown-current">
+        <span class="dropdown-arrow"><span class="dropdown-selected">{{ site.Language.Label }}</span>
+        </span>
+    </div>
+    <nav class="dropdown-nav">
+        <ul class="dropdown-group">
+            {{ range hugo.Sites }}
+            {{ if ne .Language.Lang $currentLang }}
+            {{ $lang := .Language.Lang }}
+            {{ $url := .Home.Permalink }}
+            {{ range $page.Rotate "language" }}
+            {{ if eq .Language.Lang $lang }}{{ $url = .Permalink }}{{ end }}
+            {{ end }}
+            <li><a href="{{ $url }}">{{ .Language.Label }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+</div>
+{{ end }}
